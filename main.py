@@ -18,9 +18,15 @@ while True:
 
     elif choise == "2":
         print("----------Запись по полю----------")
-        item = input("Введите поле которое вывести ")
-        for i in data:
-            print(f"{i[item]}")
+        item = int(input("Введите поле которое вывести "))
+        for i, flower in enumerate(data):
+            if flower['id'] == item:
+                print(f"""Номер цветка: {flower["id"]} 
+        Название: {flower["name"]}
+        Латинское название: {flower["latin_name"]}
+        Краснокнижный цветок? {flower["is_red_book_flower"]}
+        Цена: {flower["price"]} BYN\n""")
+        print(f"Запись с ID {item} не найдена.")
         count +=1
         
 

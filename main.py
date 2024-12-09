@@ -26,7 +26,8 @@ while True:
         Латинское название: {flower["latin_name"]}
         Краснокнижный цветок? {flower["is_red_book_flower"]}
         Цена: {flower["price"]} BYN\n""")
-        print(f"Запись с ID {item} не найдена.")
+            else:        
+                print(f"Запись с ID {item} не найдена.")
         count +=1
         
 
@@ -59,4 +60,3 @@ while True:
         print("----------Пока----------")
         break 
          
-

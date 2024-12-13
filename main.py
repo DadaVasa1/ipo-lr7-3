@@ -32,7 +32,7 @@ while True:
     elif choise == "3": 
         print("----------Добавить запись----------")  
         newDct = {} 
-        newDct["id"] = len(data) + 1 
+        newDct["id"] = max(item["id"] for item in data) + 1 
         while True:
             newDct["name"] = input("Введите названия цветка ")
             if newDct["name"] != "":
